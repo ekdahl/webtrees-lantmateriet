@@ -68,6 +68,15 @@ class Lantmateriet extends AbstractModule implements ModuleCustomInterface, Modu
                 'minZoom'     => 2,
                 'url'         => 'https://minkarta.lantmateriet.se/map/topowebbcache?layer=topowebb&style=default&tilematrixset=3857&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fpng&TileMatrix={z}&TileCol={x}&TileRow={y}',
             ],
+            (object) [
+                'attribution' => '<a href="https://www.lantmateriet.se">Lantmäteriet</a>',
+                'default'     => true,
+                'label'       => 'Nedtonad karta',
+                'maxZoom'     => 17,
+                'minZoom'     => 2,
+                'url'         => 'https://minkarta.lantmateriet.se/map/topowebbcache?layer=topowebb_nedtonad&style=default&tilematrixset=3857&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fpng&TileMatrix={z}&TileCol={x}&TileRow={y}',
+            ],
+
         ];
     }
 }
