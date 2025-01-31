@@ -29,6 +29,8 @@ class Lantmateriet extends AbstractModule implements ModuleCustomInterface, Modu
     public const CUSTOM_SUPPORT_URL = 'https://github.com/ekdahl/webtrees-lantmateriet';
     public const CUSTOM_LATEST_VERSION = 'https://raw.githubusercontent.com/' . self::GITHUB_REPO . '/main/latest-version.txt';
 
+    // Capabilities URL: https://minkarta.lantmateriet.se/map/topowebbcache?&Service=WMTS&Request=GetCapabilities
+
     /**
      * Description of the map provider.
      *
@@ -66,7 +68,7 @@ class Lantmateriet extends AbstractModule implements ModuleCustomInterface, Modu
                 'label'       => 'Karta',
                 'maxZoom'     => 17,
                 'minZoom'     => 2,
-                'url'         => 'https://minkarta.lantmateriet.se/map/topowebbcache?layer=topowebb&style=default&tilematrixset=3857&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fpng&TileMatrix={z}&TileCol={x}&TileRow={y}',
+                'url'         => 'https://minkarta.lantmateriet.se/map/topowebbcache?layer=topowebb&tilematrixset=3857&Service=WMTS&Request=GetTile&TileMatrix={z}&TileCol={x}&TileRow={y}',
             ],
             (object) [
                 'attribution' => '<a href="https://www.lantmateriet.se">Lantmäteriet</a>',
@@ -74,9 +76,8 @@ class Lantmateriet extends AbstractModule implements ModuleCustomInterface, Modu
                 'label'       => 'Nedtonad karta',
                 'maxZoom'     => 17,
                 'minZoom'     => 2,
-                'url'         => 'https://minkarta.lantmateriet.se/map/topowebbcache?layer=topowebb_nedtonad&style=default&tilematrixset=3857&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fpng&TileMatrix={z}&TileCol={x}&TileRow={y}',
+                'url'         => 'https://minkarta.lantmateriet.se/map/topowebbcache?layer=topowebb_nedtonad&tilematrixset=3857&Service=WMTS&Request=GetTile&TileMatrix={z}&TileCol={x}&TileRow={y}',
             ],
-
         ];
     }
 }
