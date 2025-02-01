@@ -69,24 +69,30 @@ class Lantmateriet extends AbstractModule implements ModuleCustomInterface, Modu
     {
         return [
             (object) [
-                'attribution' => '<a href="https://www.lantmateriet.se">Lantmäteriet</a>',
                 'default'     => true,
                 'label'       => 'Karta',
-                'maxZoom'     => 17,
-                'minZoom'     => 2,
                 'url'         => 'https://minkarta.lantmateriet.se/map/topowebbcache?layer=topowebb&tilematrixset=3857&Service=WMTS&Request=GetTile&TileMatrix={z}&TileCol={x}&TileRow={y}',
+                'options'  => 
+                    (object) [
+                        'attribution' => '<a href="https://www.lantmateriet.se">Lantmäteriet</a>',
+                        'maxZoom'     => 17,
+                        'minZoom'     => 2,
+                    ],
             ],
             (object) [
-                'attribution' => '<a href="https://www.lantmateriet.se">Lantmäteriet</a>',
                 'label'       => 'Nedtonad karta',
-                'maxZoom'     => 17,
-                'minZoom'     => 2,
                 'url'         => 'https://minkarta.lantmateriet.se/map/topowebbcache?layer=topowebb_nedtonad&tilematrixset=3857&Service=WMTS&Request=GetTile&TileMatrix={z}&TileCol={x}&TileRow={y}',
+                'options'  => 
+                    (object) [
+                        'attribution' => '<a href="https://www.lantmateriet.se">Lantmäteriet</a>',
+                        'maxZoom'     => 17,
+                        'minZoom'     => 2,
+                    ],
             ],
             (object) [
                 'label'       => 'Flygbild',
                 'url'         => 'https://minkarta.lantmateriet.se/map/ortofoto',
-                'wmsOptions'  => 
+                'options'  => 
                     (object) [
                         'attribution' => '<a href="https://www.lantmateriet.se">Lantmäteriet</a>',
                         'layers'      => 'Ortofoto_0.5,Ortofoto_0.4,Ortofoto_0.25,Ortofoto_0.16',
@@ -96,12 +102,12 @@ class Lantmateriet extends AbstractModule implements ModuleCustomInterface, Modu
                     ],
             ],
             (object) [
-                'label'       => 'Flygbild ca 1960',
+                'label'       => 'Flygbild 1995-2005',
                 'url'         => 'https://minkarta.lantmateriet.se/map/historiskaortofoto',
-                'wmsOptions'  => 
+                'options'  => 
                     (object) [
                         'attribution' => '<a href="https://www.lantmateriet.se">Lantmäteriet</a>',
-                        'layers'      => 'OI.Histortho_60',
+                        'layers'      => 'Ortho_1993,Ortho_1994,Ortho_1995,Ortho_1996,Ortho_1997,Ortho_1998,Ortho_1999,Ortho_2000,Ortho_2001,Ortho_2002,Ortho_2003,Ortho_2004,Ortho_2005',
                         'maxZoom'     => 18,
                         'minZoom'     => 2,
                         'service'     => 'WMS',
@@ -110,7 +116,7 @@ class Lantmateriet extends AbstractModule implements ModuleCustomInterface, Modu
             (object) [
                 'label'       => 'Flygbild ca 1975',
                 'url'         => 'https://minkarta.lantmateriet.se/map/historiskaortofoto',
-                'wmsOptions'  => 
+                'options'  => 
                     (object) [
                         'attribution' => '<a href="https://www.lantmateriet.se">Lantmäteriet</a>',
                         'layers'      => 'OI.Histortho_75',
@@ -120,12 +126,12 @@ class Lantmateriet extends AbstractModule implements ModuleCustomInterface, Modu
                     ],
             ],
             (object) [
-                'label'       => 'Flygbild 1995-2005',
+                'label'       => 'Flygbild ca 1960',
                 'url'         => 'https://minkarta.lantmateriet.se/map/historiskaortofoto',
-                'wmsOptions'  => 
+                'options'  => 
                     (object) [
                         'attribution' => '<a href="https://www.lantmateriet.se">Lantmäteriet</a>',
-                        'layers'      => 'Ortho_1993,Ortho_1994,Ortho_1995,Ortho_1996,Ortho_1997,Ortho_1998,Ortho_1999,Ortho_2000,Ortho_2001,Ortho_2002,Ortho_2003,Ortho_2004,Ortho_2005',
+                        'layers'      => 'OI.Histortho_60',
                         'maxZoom'     => 18,
                         'minZoom'     => 2,
                         'service'     => 'WMS',
