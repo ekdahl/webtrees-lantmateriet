@@ -24,7 +24,7 @@ class Lantmateriet extends AbstractModule implements ModuleCustomInterface, Modu
     use ModuleMapProviderTrait;
 
     public const CUSTOM_AUTHOR = 'Fredrik Ekdahl';
-    public const CUSTOM_VERSION = '1.0.0';
+    public const CUSTOM_VERSION = '1.0.1';
     public const GITHUB_REPO = 'ekdahl/webtrees-lantmateriet';
     public const CUSTOM_SUPPORT_URL = 'https://github.com/ekdahl/webtrees-lantmateriet';
     public const CUSTOM_LATEST_VERSION = 'https://raw.githubusercontent.com/' . self::GITHUB_REPO . '/main/latest-version.txt';
@@ -88,8 +88,8 @@ class Lantmateriet extends AbstractModule implements ModuleCustomInterface, Modu
                         'maxZoom'     => 17,
                         'minZoom'     => 2,
                     ],
-            ],
-            (object) [
+            ],            
+            /*(object) [
                 'label'       => 'Flygbild',
                 'url'         => 'https://minkarta.lantmateriet.se/map/ortofoto',
                 'options'  => 
@@ -136,7 +136,7 @@ class Lantmateriet extends AbstractModule implements ModuleCustomInterface, Modu
                         'minZoom'     => 2,
                         'service'     => 'WMS',
                     ],
-            ],
+            ],*/
         ];
     }
 }
